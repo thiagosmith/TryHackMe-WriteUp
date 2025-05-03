@@ -177,7 +177,7 @@ cat /etc/passwd | cut -d ":" -f 1
 
 ![RCE](./img/39.png)
 
-## Password spay with hydra on ssh service:
+## Password spray with hydra on ssh service:
 
 ![RCE](./img/40.png)
 
