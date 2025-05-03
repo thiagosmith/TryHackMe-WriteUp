@@ -1,5 +1,7 @@
-# Official Write-Up 5M1TH - AgroPro by 5M1TH.
+## TryHackMe WritUps
 
-## Let’s enjoy the green fields and relax, enjoying nature. Exploit CVE-2024–40110
+# AgroPro: 
+
+https://github.com/thiagosmith/TryHackMe-WriteUp/blob/main/AgroPro/README.md
 
 
