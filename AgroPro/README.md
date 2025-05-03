@@ -172,7 +172,7 @@ cat /etc/passwd | cut -d ":" -f 1
 
 # Password spay with hydra on ssh service:
 
-![RCE](./img/38.png)
+![RCE](./img/39.png)
 
 ```
 ssh 
@@ -183,39 +183,39 @@ password:
 
 # Initial acess from ssh user and pass. The first flag!!!
 
-![RCE](./img/39.png)
+![RCE](./img/40.png)
 
 ## Task 2 - Lateral movement and horizontal privilege escalation.
 
 # Locate linpeas.sh
 
-![RCE](./img/40.png)
+![RCE](./img/41.png)
 
 https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
 
-![RCE](./img/41.png)
+![RCE](./img/42.png)
 
 # Download linpeas.sh
 
-![RCE](./img/42.png)
+![RCE](./img/43.png)
 
 # Listener with web server in python:
 
-![RCE](./img/43.png)
+![RCE](./img/44.png)
 
 # Request from target:
 
-![RCE](./img/44.png)
+![RCE](./img/45.png)
 
 # Assigning execution rights to the binary file and execution:
 
-![RCE](./img/45.png)
+![RCE](./img/46.png)
 
 ## Important reports
 
 # Kernel exploits less - probable:
 
-![RCE](./img/46.png)
+![RCE](./img/47.png)
 
 # Crontab:
 
