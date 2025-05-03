@@ -4,15 +4,13 @@
 
 ![RCE](./img/01.png)
 
-
+###
 
 # Let’s go!!!
 
 ## Task 1 - Enumeration and Initial Access
 
 ![RCE](./img/02.png)
-
-
 
 # RECONAISSANCE AND ENUMERATION
 
