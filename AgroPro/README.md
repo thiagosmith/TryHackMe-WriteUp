@@ -301,9 +301,8 @@ I built the machine and the room with the aim of helping enthusiasts understand 
 
 Persistence is the key word in this challenge, proposed for those who decide to accept it.
 
-```
 “The true achievement is not just in finding a functional exploit, but in refining challenges, adapting strategies, and never giving up in the face of adversity. Persistence turns obstacles into learning and evolution!”
-```
+
 # About the author:
 
 ## https://www.linkedin.com/in/smith-braz-938825209/
