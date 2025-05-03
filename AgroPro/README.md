@@ -291,15 +291,16 @@ https://gtfobins.github.io/gtfobins/mawk
 ![RCE](./img/63.png)
 
 # Final words:
-## The intention behind creating this room arose when, at a certain moment, I was researching exploits for vulnerable applications on the exploit-db.com website.
+The intention behind creating this room arose when, at a certain moment, I was researching exploits for vulnerable applications on the exploit-db.com website.
 
-## I found the exploit for the application I was testing in a fully controlled environment. However, when executing it, I received the error message described in this Write-Up.
+I found the exploit for the application I was testing in a fully controlled environment. However, when executing it, I received the error message described in this Write-Up.
 
-## Faced with adversity, I managed to fix the exploit and enhance it to meet my specific needs at that moment.
+Faced with adversity, I managed to fix the exploit and enhance it to meet my specific needs at that moment.
 
-## I built the machine and the room with the aim of helping enthusiasts understand that we need to adapt to applications and that not every exploit we find will work successfully on the first attempt.
+I built the machine and the room with the aim of helping enthusiasts understand that we need to adapt to applications and that not every exploit we find will work successfully on the first attempt.
 
-## Persistence is the key word in this challenge, proposed for those who decide to accept it.
+Persistence is the key word in this challenge, proposed for those who decide to accept it.
+
 ```
 “The true achievement is not just in finding a functional exploit, but in refining challenges, adapting strategies, and never giving up in the face of adversity. Persistence turns obstacles into learning and evolution!”
 ```
