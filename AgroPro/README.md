@@ -12,6 +12,8 @@
 
 ![RCE](./img/02.png)
 
+#
+
 # RECONAISSANCE AND ENUMERATION
 
 ## Nmap simple scan detect 3 opened ports:
