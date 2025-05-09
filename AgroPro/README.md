@@ -2,7 +2,7 @@
 
 ## Let’s enjoy the green fields and relax, enjoying nature. Exploit CVE-2024–40110
 
-![RCE](./img/01.png)
+[1](./img/01.png)
 
 #
 
